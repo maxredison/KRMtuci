@@ -25,7 +25,7 @@ def subtract():
     b = request.args.get('b', type=float)
     if a is None or b is None:
         return jsonify(
-            {"error": "Please provide both 'a' and 'b' parameters"}
+            {"error": "Ne vveli a ili b"}
         ), 400
     return jsonify({"result": a - b})
 
