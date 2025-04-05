@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def home():
-    return "Welcome to the Simple API!"
+    return "Privet!"
 
 
 @app.route('/add', methods=['GET'])
@@ -14,7 +14,7 @@ def add():
     b = request.args.get('b', type=float)
     if a is None or b is None:
         return jsonify(
-            {"error": "Please provide both 'a' and 'b' parameters"}
+            {"error": "no chisel"}
         ), 400
     return jsonify({"result": a + b})
 
@@ -25,7 +25,7 @@ def subtract():
     b = request.args.get('b', type=float)
     if a is None or b is None:
         return jsonify(
-            {"error": "Ne vveli a ili b"}
+            {"error": "no chisel"}
         ), 400
     return jsonify({"result": a - b})
 
